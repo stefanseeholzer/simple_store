@@ -2125,3 +2125,130 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 112ms (Views: 103.3ms | ActiveRecord: 5.1ms | Allocations: 101238)
 
 
+Started GET "/products" for ::1 at 2024-02-27 14:21:59 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 86.0ms | Allocations: 81114)
+  Rendered layout layouts/application.html.erb (Duration: 100.5ms | Allocations: 99380)
+Completed 200 OK in 105ms (Views: 98.7ms | ActiveRecord: 4.0ms | Allocations: 101246)
+
+
+Started GET "/products/p2" for ::1 at 2024-02-27 14:22:02 -0600
+  
+ActionController::RoutingError (uninitialized constant ProductController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  ProductsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/products/4" for ::1 at 2024-02-27 14:22:06 -0600
+  
+ActionController::RoutingError (uninitialized constant ProductController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  ProductsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/products" for ::1 at 2024-02-27 14:22:20 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 139.3ms | Allocations: 81110)
+  Rendered layout layouts/application.html.erb (Duration: 191.5ms | Allocations: 99364)
+Completed 200 OK in 196ms (Views: 189.2ms | ActiveRecord: 4.6ms | Allocations: 101225)
+
+
+Started GET "/products/p1" for ::1 at 2024-02-27 14:22:25 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"p1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:7:in `show'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.2ms | Allocations: 3198)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=p1):
+  
+app/controllers/products_controller.rb:7:in `show'
+Started GET "/products/p1" for ::1 at 2024-02-27 14:22:25 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"p1"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:7:in `show'
+Completed 404 Not Found in 4ms (ActiveRecord: 1.3ms | Allocations: 2388)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=p1):
+  
+app/controllers/products_controller.rb:7:in `show'
+Started GET "/products/5" for ::1 at 2024-02-27 14:22:39 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 156)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1822)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 2687)
+
+
+Started GET "/products/3" for ::1 at 2024-02-27 14:22:42 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1574)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 2342)
+
+
+Started GET "/products" for ::1 at 2024-02-27 14:24:47 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 130.8ms | Allocations: 95423)
+  Rendered layout layouts/application.html.erb (Duration: 197.8ms | Allocations: 113674)
+Completed 200 OK in 203ms (Views: 195.1ms | ActiveRecord: 4.9ms | Allocations: 115538)
+
+
+Started GET "/products/1" for ::1 at 2024-02-27 14:24:48 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 148)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1725)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 3276)
+
+
+Started GET "/products/4" for ::1 at 2024-02-27 14:24:50 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1574)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 2341)
+
+
