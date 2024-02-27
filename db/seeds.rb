@@ -8,5 +8,15 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-product = Product.create
-puts product.errors.full_messages
+# product = Product.create
+# puts product.errors.full_messages
+
+676.times do
+    product = Product.create(
+        title: Faker::Commerce.product_name,
+        price: Faker::Commerce.price(range: 0..10.0, as_string: true),
+        stock_quantity: Faker::Number.between(from: 0, to: 100)
+    )
+end
+
+puts "Created #{Product.count} products"
