@@ -2051,3 +2051,77 @@ Completed 200 OK in 40ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 748
   [1m[36mProduct Create (1.0ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "stock_quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Synergistic Bronze Shirt"], ["description", nil], ["price", 6.06], ["stock_quantity", 40], ["created_at", "2024-02-27 20:07:22.829314"], ["updated_at", "2024-02-27 20:07:22.829314"]]
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mProduct Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started GET "/" for ::1 at 2024-02-27 14:10:34 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stefan/.asdf/installs/ruby/3.1.4/lib/ruby/gems/3.1.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stefan/.asdf/installs/ruby/3.1.4/lib/ruby/gems/3.1.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 286)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 1087)
+
+
+Started GET "/" for ::1 at 2024-02-27 14:14:18 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stefan/.asdf/installs/ruby/3.1.4/lib/ruby/gems/3.1.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stefan/.asdf/installs/ruby/3.1.4/lib/ruby/gems/3.1.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 286)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1083)
+
+
+Started GET "/protectedroute" for ::1 at 2024-02-27 14:14:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/protectedroute"):
+  
+Started GET "/products/p2" for ::1 at 2024-02-27 14:14:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/products/p2"):
+  
+Started GET "/products/p2" for ::1 at 2024-02-27 14:14:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/products/p2"):
+  
+Started GET "/products" for ::1 at 2024-02-27 14:14:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+Started GET "/products" for ::1 at 2024-02-27 14:15:40 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 128.2ms | Allocations: 91322)
+  Rendered layout layouts/application.html.erb (Duration: 536.8ms | Allocations: 189950)
+Completed 200 OK in 555ms (Views: 532.1ms | ActiveRecord: 6.9ms | Allocations: 196930)
+
+
+Started GET "/products" for ::1 at 2024-02-27 14:15:55 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 94.4ms | Allocations: 81134)
+  Rendered layout layouts/application.html.erb (Duration: 129.6ms | Allocations: 101375)
+Completed 200 OK in 134ms (Views: 127.6ms | ActiveRecord: 4.0ms | Allocations: 103259)
+
+
+Started GET "/products" for ::1 at 2024-02-27 14:16:03 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 88.6ms | Allocations: 81121)
+  Rendered layout layouts/application.html.erb (Duration: 103.0ms | Allocations: 99379)
+Completed 200 OK in 108ms (Views: 100.7ms | ActiveRecord: 4.5ms | Allocations: 101242)
+
+
+Started GET "/products" for ::1 at 2024-02-27 14:16:07 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 90.0ms | Allocations: 81114)
+  Rendered layout layouts/application.html.erb (Duration: 106.0ms | Allocations: 99372)
+Completed 200 OK in 112ms (Views: 103.3ms | ActiveRecord: 5.1ms | Allocations: 101238)
+
+
