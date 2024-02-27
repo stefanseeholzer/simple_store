@@ -4328,3 +4328,15 @@ FOREIGN KEY ("category_id")
   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240227202800') RETURNING "version"[0m
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/products" for ::1 at 2024-02-27 14:29:56 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1283)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 19475)
+Completed 200 OK in 40ms (Views: 22.0ms | ActiveRecord: 1.9ms | Allocations: 22361)
+
+
